@@ -3,6 +3,10 @@ const fetch = require('node-fetch');
 
 const app = express();
 
+const cors = require('cors');
+app.use(cors());
+
+
 const SOURCE_BASE = 'http://23.237.104.106:8080/USA_NICKELODEON';
 
 app.get('/playlist.m3u8', async (req, res) => {
